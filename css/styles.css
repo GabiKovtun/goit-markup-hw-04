@@ -35,7 +35,6 @@ body {
     font-family: 'Roboto', sans-serif;
     color: var(--text-color);
     background: var(--white-color);
-    width: 1600px;
     margin: 0 auto;
 
 }
@@ -71,13 +70,13 @@ body {
 
 .header-mail,
 .header-tel {
-    fill: var(--text-color);
+    color: var(--text-color);
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
-
+.header-icon{fill: currentColor;}
 .header-mail:hover,
 .header-tel:hover {
     color: var(--accent-color);
@@ -96,7 +95,6 @@ body {
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
-
     letter-spacing: 0.03em;
 }
 
@@ -118,14 +116,16 @@ body {
     color: var(--accent-color);
 }
 
-.site-nav,
-.site-nav ul {
-    gap: 50px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+.site-nav
+{display: flex;
+justify-content: flex-start;
+align-items: center;
 }
 
+.site-nav-list {
+    gap: 50px;
+    display: flex;
+}
 
 .header-contact {
     display: flex;
@@ -168,10 +168,13 @@ body {
 /* ------Studio--------------сторінка студія ---------------- */
 /* ---------Hero---------- */
 .hero {
-    background-color: var(--dark-background-color);
+    max-width: 1600px;
+    background-color: #C4C4C4;
+    ;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Img.jpg);
     background-repeat: no-repeat;
     background-position: center;
+    margin: 0 auto;
     padding-top: 200px;
     padding-bottom: 200px;
     text-align: center;
@@ -409,8 +412,9 @@ body {
     fill: var(--icon-color);
 }
 
-.client-link:hover {
-    border: 1px solid var(--accent-color);
+.client-link:hover,
+.client-link:focus {
+    border-color: var(--accent-color);
     fill: var(--accent-color);
 }
 
@@ -598,6 +602,7 @@ body {
     display: block;
 }
 
-.portfolio-link:hover,.portfolio-link:focus {
+.portfolio-link:hover,
+.portfolio-link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
